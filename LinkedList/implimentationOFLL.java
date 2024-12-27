@@ -36,8 +36,22 @@ public class implimentationOFLL {
     tail.next = newNode;
     tail = newNode;
   }
+  // print a linked list 
+  public static void print () {
+    Node temp = head;
+    while (temp != null){
+      System.out.print(temp.data + "-> ");
+      temp = temp.next;
+    }
+    System.out.println("null");
+  }
   public static void main (String args[]){
     System.out.println("Implimantation of linked list");
+    implimentationOFLL ll = new implimentationOFLL() ;
+    ll.addFirst(5);
+    ll.addFirst(8);
+    ll.addFirst(11);
+    print();
     
   }
 }
