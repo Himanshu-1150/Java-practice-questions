@@ -1,5 +1,7 @@
 
 
+
+
 public class implimentationOFLL {
   public static class Node {
     int data;
@@ -140,6 +142,20 @@ public class implimentationOFLL {
   public int recSearch (int key){
     return helper(head, key);
   }
+
+  // Reverse a Linked List
+  public void reverse () {
+    Node prev = null;
+    Node curr = tail = head;
+    Node next;
+    while (curr != null){
+      next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    head = prev;
+  }
   public static void main (String args[]){
     System.out.println("Implimantation of linked list");
     implimentationOFLL ll = new implimentationOFLL() ;
@@ -155,6 +171,8 @@ public class implimentationOFLL {
     print();
     System.out.println(ll.itrSearch(8));
     System.out.println(ll.recSearch(11));
+    ll.reverse();
+    print();
     
   }
 }
