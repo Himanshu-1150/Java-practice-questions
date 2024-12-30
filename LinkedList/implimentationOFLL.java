@@ -122,6 +122,24 @@ public class implimentationOFLL {
     }
     return -1;
   }
+
+  // Recursive Search
+  public int helper (Node head, int key){
+    if (head ==null){
+      return -1;
+    }
+    if (head.data == key){
+      return 0;
+    }
+    int idx = helper (head.next, key);
+    if (idx == -1){
+      return -1;
+    }
+    return idx +1;
+  }
+  public int recSearch (int key){
+    return helper(head, key);
+  }
   public static void main (String args[]){
     System.out.println("Implimantation of linked list");
     implimentationOFLL ll = new implimentationOFLL() ;
@@ -136,6 +154,7 @@ public class implimentationOFLL {
     ll.removeLast();
     print();
     System.out.println(ll.itrSearch(8));
+    System.out.println(ll.recSearch(11));
     
   }
 }
