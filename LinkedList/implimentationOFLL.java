@@ -1,4 +1,6 @@
 
+import java.util.spi.CurrencyNameProvider;
+import javax.naming.spi.ResolveResult;
 
 
 
@@ -172,7 +174,6 @@ public class implimentationOFLL {
     System.out.println(ll.itrSearch(8));
     System.out.println(ll.recSearch(11));
     ll.reverse();
-    print();
     
   }
 }
