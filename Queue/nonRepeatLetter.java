@@ -23,7 +23,9 @@ public class nonRepeatLetter {
   }
   public static void main (String args[]){
     String str = "aabccxb";
-    PrintNonRepeatingLetter(str);
+    String str2 = "adkfjijf"
+    PrintNonRepeatingLetter(str2);
+
   }
 }
 
