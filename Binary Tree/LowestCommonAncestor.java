@@ -36,6 +36,7 @@ public class LowestCommonAncestor {
     for (; i< path1.size() && i<path2.size(); i++){
       if (path1.get(i) != path2.get(i)){
         break;
+
       }
     }
     // last equal node -> i-1th
