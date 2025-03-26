@@ -30,16 +30,16 @@ public class Mirror {
     preorder(root.right);
     
   }
-  public TreeNode invertTree(TreeNode root) {
+  public Node invertTree(Node root) {
     if (root == null) {
         return null;
     }
-    TreeNode left = invertTree(root.left);
-    TreeNode right = invertTree(root.right);
+    Node left = invertTree(root.left);
+    Node right = invertTree(root.right);
     root.left = right;
     root.right = left;
     return root;
-}
+  }
   public static void main (String args[] ) {
     System.out.println("Mirror of a binary tree");
     Node root = new Node (8);
