@@ -56,5 +56,6 @@ public class Mirror {
     System.out.println("mirror of tree");
     Node mirror = createMirror(root);
     preorder(mirror);
+    
   }
 }
